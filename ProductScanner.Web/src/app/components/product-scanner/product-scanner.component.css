@@ -1,0 +1,63 @@
+/* Styling for the barcode input and scan button */
+.barcode-input {
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .scan-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .scan-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the products table */
+  .products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .products-table th, .products-table td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .products-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .products-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .products-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Animation for updated product row */
+  .updated {
+    background-color: #d4edda;  /* Light green background for updated rows */
+    animation: highlight 1s ease-out;
+  }
+  
+  @keyframes highlight {
+    0% {
+      background-color: #d4edda;
+    }
+    50% {
+      background-color: #f1f1f1;
+    }
+    100% {
+      background-color: #d4edda;
+    }
+  }
+  

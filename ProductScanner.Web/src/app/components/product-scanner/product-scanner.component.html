@@ -1,0 +1,33 @@
+<div>
+    <h2>Product Scanner</h2>
+  
+    <div>
+      <input 
+        type="text" 
+        [(ngModel)]="scannedBarcode" 
+        placeholder="Scan Barcode" 
+        class="barcode-input" 
+      />
+      <button (click)="scanProduct()" class="scan-button">Scan</button>
+    </div>
+  
+    <h3>Product List</h3>
+  
+    <!-- Products Table -->
+    <table border="1" class="products-table">
+      <thead>
+        <tr>
+          <th>Barcode</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" 
+            [ngClass]="{'updated': updatedProduct?.barcode === product.barcode}">
+          <td>{{ product.barcode }}</td>
+          <td>{{ product.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
